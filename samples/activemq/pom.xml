@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <!-- NOTE(dwtj): Boilerplate for this Maven POM file was adapted from the POM
 file of the sibling sample project, `commandlinerunner`. -->
+
 <project
 		xmlns="http://maven.apache.org/POM/4.0.0"
 		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -27,19 +29,17 @@ file of the sibling sample project, `commandlinerunner`. -->
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter</artifactId>
+			<artifactId>spring-boot-starter-activemq</artifactId>
+            <!-- TODO(dwtj): Consider disabling logging to speed up testing.
+            Other samples do this. -->
+            <!--
 			<exclusions>
-				<!-- On purpose exclusion to test java.util.logging -->
 				<exclusion>
 					<groupId>org.springframework.boot</groupId>
 					<artifactId>spring-boot-starter-logging</artifactId>
 				</exclusion>
 			</exclusions>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
+            -->
 		</dependency>
 	</dependencies>
 
