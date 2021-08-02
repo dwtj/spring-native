@@ -1,4 +1,0 @@
-[
-  ["javax.jms.Connection","javax.jms.QueueConnection","javax.jms.TopicConnection"],
-  ["org.springframework.jms.connection.SessionProxy","javax.jms.QueueSession","javax.jms.TopicSession"]
-]
