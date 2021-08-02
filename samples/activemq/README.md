@@ -23,7 +23,7 @@ use Spring Native's `native-maven-plugin`.
 ### Via Maven with Local JVM
 
 ```sh
-mvn spring-boot:run
+mvn package spring-boot:run
 ```
 
 Then check to see that "Hello, world!" is printed to `stdout`.
