@@ -35,33 +35,6 @@
   "methods":[{"name":"<init>","parameterTypes":["java.lang.String"] }]
 },
 {
-  "name":"javax.jms.ConnectionFactory",
-  "allDeclaredMethods":true,
-  "allPublicMethods":true
-},
-{
-  "name":"javax.jms.ExceptionListener",
-  "allDeclaredMethods":true,
-  "allPublicMethods":true
-},
-{
-  "name":"javax.jms.Message"
-},
-{
-  "name":"javax.jms.QueueConnectionFactory",
-  "allDeclaredMethods":true,
-  "allPublicMethods":true
-},
-{
-  "name":"javax.jms.Session",
-  "allPublicFields":true
-},
-{
-  "name":"javax.jms.TopicConnectionFactory",
-  "allDeclaredMethods":true,
-  "allPublicMethods":true
-},
-{
   "name":"org.apache.activemq.ActiveMQConnection"
 },
 {
