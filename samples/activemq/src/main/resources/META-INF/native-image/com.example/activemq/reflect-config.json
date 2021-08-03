@@ -1,35 +1,5 @@
 [
 {
-  "name":"com.example.activemq.Application",
-  "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "allDeclaredConstructors":true,
-  "allDeclaredClasses":true,
-  "methods":[{"name":"main","parameterTypes":["java.lang.String[]"] }]
-},
-{
-  "name":"com.example.activemq.Application$$EnhancerBySpringCGLIB$$bbb64dc4",
-  "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "allDeclaredConstructors":true,
-  "fields":[{"name":"CGLIB$FACTORY_DATA"}],
-  "methods":[{"name":"myFactory","parameterTypes":["javax.jms.ConnectionFactory","org.springframework.boot.autoconfigure.jms.DefaultJmsListenerContainerFactoryConfigurer"] }]
-},
-{
-  "name":"com.example.activemq.Application$$EnhancerBySpringCGLIB$$bbb64dc4$$FastClassBySpringCGLIB$$f33d2d51",
-  "methods":[{"name":"<init>","parameterTypes":["java.lang.Class"] }]
-},
-{
-  "name":"com.example.activemq.Application$$FastClassBySpringCGLIB$$a8ba73bd",
-  "methods":[{"name":"<init>","parameterTypes":["java.lang.Class"] }]
-},
-{
-  "name":"com.example.activemq.MessageReceiver",
-  "allDeclaredFields":true,
-  "allDeclaredMethods":true,
-  "allDeclaredConstructors":true
-},
-{
   "name":"com.example.activemq.StringMessage",
   "allDeclaredMethods":true,
   "methods":[{"name":"<init>","parameterTypes":["java.lang.String"] }]
