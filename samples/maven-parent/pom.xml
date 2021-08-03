@@ -48,7 +48,7 @@
 				<plugin>
 					<groupId>org.springframework.experimental</groupId>
 					<artifactId>spring-aot-maven-plugin</artifactId>
-					<version>0.10.2-SNAPSHOT</version>
+					<version>0.10.3-SNAPSHOT</version>
 					<executions>
 						<execution>
 							<id>test-generate</id>
