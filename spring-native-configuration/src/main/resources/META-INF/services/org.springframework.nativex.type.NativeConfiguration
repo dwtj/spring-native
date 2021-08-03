@@ -1,4 +1,5 @@
 org.springframework.jms.JmsHints
+org.apache.activemq.ActiveMQHints
 org.springframework.scheduling.quartz.QuartzHints
 LoggingInitHints
 com.google.protobuf.ProtobufHints
