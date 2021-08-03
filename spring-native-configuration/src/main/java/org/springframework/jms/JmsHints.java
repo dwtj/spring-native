@@ -22,8 +22,6 @@ import org.springframework.nativex.hint.TypeHint;
 import org.springframework.nativex.type.NativeConfiguration;
 import org.springframework.nativex.type.TypeSystem;
 
-import java.lang.annotation.Native;
-
 // TODO(dwtj): Figure out how to include the various named classes as dependencies of `spring-native-configuration`.
 //  Then replace uses of `typeNames` with `types` and convert strings to `.class` expressions.
 @NativeHint(
