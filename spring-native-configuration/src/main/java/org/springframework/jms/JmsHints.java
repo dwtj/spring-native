@@ -18,12 +18,15 @@ package org.springframework.jms;
 
 import org.springframework.nativex.hint.JdkProxyHint;
 import org.springframework.nativex.hint.NativeHint;
+import org.springframework.nativex.hint.TypeHint;
 import org.springframework.nativex.type.NativeConfiguration;
 import org.springframework.nativex.type.TypeSystem;
 
+import java.lang.annotation.Native;
+
+// TODO(dwtj): Figure out how to include the various named classes as dependencies of `spring-native-configuration`.
+//  Then replace uses of `typeNames` with `types` and convert strings to `.class` expressions.
 @NativeHint(
-    // TODO(dwtj): Figure out how to include these classes as dependencies of `spring-native-configuration`. Then
-    //  use `types` instead of `typeNames` and convert these strings to ".class" expressions.
     jdkProxies = {
         @JdkProxyHint(
             typeNames = {
@@ -40,6 +43,18 @@ import org.springframework.nativex.type.TypeSystem;
             }
         ),
     }
+)
+@NativeHint(
+        types = @TypeHint(
+                typeNames = {
+                        "javax.jms.ConnectionFactory",
+                        "javax.jms.ExceptionListener",
+                        "javax.jms.Message",
+                        "javax.jms.QueueConnectionFactory",
+                        "javax.jms.Session",
+                        "javax.jms.TopicConnectionFactory"
+                }
+        )
 )
 public class JmsHints implements NativeConfiguration {
     // TODO(dwtj): Get feedback about whether this is appropriate criteria for enabling `JmsHints`.
