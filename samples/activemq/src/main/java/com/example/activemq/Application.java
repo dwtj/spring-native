@@ -19,25 +19,6 @@ import org.springframework.nativex.hint.JdkProxyHint;
 
 @SpringBootApplication
 @EnableJms
-@NativeHint(
-  trigger = org.apache.activemq.broker.Broker.class,
-  jdkProxies = {
-    @JdkProxyHint(
-      types = {
-        javax.jms.Connection.class,
-        javax.jms.QueueConnection.class,
-        javax.jms.TopicConnection.class
-      }
-    ),
-    @JdkProxyHint(
-      types = {
-        org.springframework.jms.connection.SessionProxy.class,
-        javax.jms.QueueSession.class,
-        javax.jms.TopicSession.class
-      }
-    ),
-  }
-)
 public class Application {
 
   @Bean
