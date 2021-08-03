@@ -19,10 +19,9 @@ package org.springframework.jms;
 import org.springframework.nativex.hint.JdkProxyHint;
 import org.springframework.nativex.hint.NativeHint;
 import org.springframework.nativex.type.NativeConfiguration;
+import org.springframework.nativex.type.TypeSystem;
 
 @NativeHint(
-    // TODO(dwtj): Choose an appropriate trigger.
-    //trigger = Object.class,
     // TODO(dwtj): Figure out how to include these classes as dependencies of `spring-native-configuration`. Then
     //  use `types` instead of `typeNames` and convert these strings to ".class" expressions.
     jdkProxies = {
@@ -43,4 +42,10 @@ import org.springframework.nativex.type.NativeConfiguration;
     }
 )
 public class JmsHints implements NativeConfiguration {
+    // TODO(dwtj): Get feedback about whether this is appropriate criteria for enabling `JmsHints`.
+    @Override
+    public boolean isValid(TypeSystem typeSystem) {
+        boolean usesSessionProxy = typeSystem.resolveName("org.springframework.jms.connection.SessionProxy", true) != null;
+        return usesSessionProxy;
+    }
 }
