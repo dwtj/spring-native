@@ -46,6 +46,7 @@ import java.lang.annotation.Native;
 )
 @NativeHint(
         types = @TypeHint(
+                // TODO(dwtj): This list of types may be an over-approximation of what is needed. Minimize it.
                 typeNames = {
                         "javax.jms.ConnectionFactory",
                         "javax.jms.ExceptionListener",
@@ -56,11 +57,21 @@ import java.lang.annotation.Native;
                 }
         )
 )
+@NativeHint(
+        types = @TypeHint(
+                typeNames = {
+                        // NOTE(dwtj): I've noticed that classes under `org.springframework.jms` are included by some
+                        //  other native configuration logic (e.g., `org.springframework.jms.annotation.EnableJms`), but
+                        //  I'm not sure from where.
+                        "org.springframework.jms.annotation.JmsListeners",
+                }
+        )
+)
 public class JmsHints implements NativeConfiguration {
     // TODO(dwtj): Get feedback about whether this is appropriate criteria for enabling `JmsHints`.
     @Override
     public boolean isValid(TypeSystem typeSystem) {
-        boolean usesSessionProxy = typeSystem.resolveName("org.springframework.jms.connection.SessionProxy", true) != null;
+        boolean usesSessionProxy = typeSystem.resolveName("org.springframework.jms.annotation.JmsListeners", true) != null;
         return usesSessionProxy;
     }
 }
